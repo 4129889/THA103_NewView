@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+ 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/newview?serverTimezone=Asia/Taipei</property>
+        <property name="hibernate.connection.username">root</property>
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>        
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+		<mapping class="com.tha103.newview.user.model.UserVO"/>
+		<mapping class="com.tha103.newview.usediscount.model.UseDiscountVO"/>
+		<mapping class="com.tha103.newview.report.model.ReportVO"/>
+		<mapping class="com.tha103.newview.likes.model.LikesVO"/>
+		
+		<mapping class="com.tha103.newview.mylike.model.MyLikeVO"></mapping>
+        <mapping class="com.tha103.newview.orders.model.OrdersVO"></mapping>
+        <mapping class="com.tha103.newview.discount.model.DiscountVO"></mapping>
+        
+        <mapping class="com.tha103.newview.act.model.ActVO"/>
+        <mapping class="com.tha103.newview.actcategory.model.ActCategory"/>
+        <mapping class="com.tha103.newview.actpic.model.ActPic"/>
+        <mapping class="com.tha103.newview.cityaddress.model.CityAddress"/>
+        
+        <mapping class="com.tha103.newview.pubuser.model.PubUserVO" />
+        <mapping class="com.tha103.newview.publisher.model.PublisherVO" />
+        <mapping class="com.tha103.newview.admin.model.AdminVO" />
+        
+        <mapping class="com.tha103.newview.postcategory.model.PostCategoryVO" />
+        <mapping class="com.tha103.newview.postmessage.model.PostMessageVO" />
+        <mapping class="com.tha103.newview.post.model.PostVO" />
+        <mapping class="com.tha103.newview.postpic.model.PostPicVO" />
+        
+        <mapping class="com.tha103.newview.cartact.model.CartActVO"/>
+        <mapping class="com.tha103.newview.compic.model.ComPicVO"/>
+        <mapping class="com.tha103.newview.orderlist.model.OrderListVO"/>                
+        <mapping class="com.tha103.newview.orders.model.Act" />
+        <mapping class="com.tha103.newview.orders.model.ActPic" />
+        <mapping class="com.tha103.newview.orders.model.Orders" />
+        <mapping class="com.tha103.newview.orders.model.Orderlist" />
+        <mapping class="com.tha103.newview.orders.model.ComPic" />
+        <mapping class="com.tha103.newview.orders.model.Publisher" />
+    </session-factory>
+</hibernate-configuration>
